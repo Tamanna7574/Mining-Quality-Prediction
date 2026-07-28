@@ -1,49 +1,78 @@
 # ⛏️ Mining Quality Prediction System
 
-An end-to-end **Machine Learning based Mining Quality Prediction System** that predicts **% Silica Concentrate** in an iron ore flotation plant using advanced regression techniques.
+## AI-Based Silica Concentrate Prediction Using CatBoost Regression
 
-The project uses an **Optimized CatBoost Regression Model with Time-Series Feature Engineering** to analyze mining process parameters and predict silica concentration.
+An end-to-end Machine Learning project that predicts **% Silica Concentrate** in an iron ore flotation plant using industrial sensor data and an optimized **CatBoost Regression Model**.
 
-The system includes:
+This project demonstrates a complete Machine Learning pipeline including:
 
-- Data preprocessing pipeline
-- Feature engineering
-- Machine learning model comparison
-- Optimized CatBoost model
-- FastAPI prediction API
+- Data preprocessing
+- Exploratory Data Analysis
+- Feature Engineering
+- Model training and comparison
+- CatBoost optimization
+- FastAPI backend development
 - Streamlit interactive dashboard
-- Data visualization and analysis
+- Cloud deployment
+
+
+---
+
+# 🚀 Live Deployment
+
+## 📊 Streamlit Dashboard
+
+Live Application:
+
+```
+https://your-streamlit-app-url.streamlit.app
+```
+
+
+## ⚡ FastAPI Backend
+
+API URL:
+
+```
+https://mining-quality-prediction.onrender.com
+```
+
+
+## 📚 API Documentation
+
+Swagger Documentation:
+
+```
+https://mining-quality-prediction.onrender.com/docs
+```
 
 
 ---
 
 # 📌 Project Overview
 
-In mining industries, maintaining the quality of iron ore concentrate is a critical task. The silica concentration level directly impacts the final product quality and operational efficiency.
+In mining industries, maintaining the quality of iron ore concentrate is a critical challenge.
 
-This project develops an AI-based prediction system that can estimate future **Silica Concentrate (%)** using historical mining process data and sensor parameters.
+The percentage of **Silica Concentrate** is one of the important quality indicators that affects the final product quality.
 
-The solution helps industries to:
+This project uses historical flotation plant sensor data to build a Machine Learning model that predicts silica concentrate values based on different process parameters.
 
-- Monitor mineral quality
-- Improve production efficiency
-- Reduce manual analysis
-- Enable data-driven decision making
+The deployed system allows users to:
+
+1. Upload mining sensor CSV data
+2. Process input features
+3. Generate silica concentrate predictions
+4. Visualize process parameters
+5. Analyze prediction results through an interactive dashboard
 
 
 ---
 
 # 🎯 Objective
 
-The main objective of this project is:
+The objective of this project is:
 
-> To build a Machine Learning model capable of predicting silica concentrate percentage using mining process parameters and time-based features.
-
-### Prediction Target
-
-```
-% Silica Concentrate
-```
+> To develop an AI-powered prediction system that can estimate % Silica Concentrate using machine learning techniques and provide an interactive dashboard for industrial analysis.
 
 
 ---
@@ -52,323 +81,155 @@ The main objective of this project is:
 
 
 ```
-                    Mining Sensor Data
+                 User
+                   |
+                   |
+                   ↓
 
-                           |
-                           ↓
+        Streamlit Dashboard
 
-              Data Cleaning & Preprocessing
+                   |
+                   |
+                   ↓
 
-                           |
-                           ↓
+          FastAPI Backend
 
-              Feature Engineering Pipeline
+                   |
+                   |
+                   ↓
 
-                           |
-                           ↓
+       Feature Engineering Pipeline
 
-          Multiple Machine Learning Models
+                   |
+                   |
+                   ↓
 
-                           |
-                           ↓
+        Optimized CatBoost Model
 
-          Optimized CatBoost Regression Model
+                   |
+                   |
+                   ↓
 
-                           |
-             -----------------------------
-             |                           |
-             ↓                           ↓
-
-       FastAPI Backend            Streamlit Dashboard
-
-             |                           |
-             ↓                           ↓
-
-    Real-Time Prediction       Visualization & Analytics
+       Silica Concentrate Prediction
 
 ```
 
 
 ---
 
-# 📂 Project Structure
+# ✨ Features
 
 
-```
-Mining_Quality_Prediction/
+## 🤖 Machine Learning Features
 
-│
-├── api/
-│   ├── main.py
-│   ├── predict.py
-│   └── schemas.py
-│
-├── app/
-│   └── app.py
-│
-├── artifacts/
-│   └── Generated training artifacts
-│
-├── data/
-│   └── Mining process datasets
-│
-├── deployment/
-│   └── requirements.txt
-│
-├── models/
-│   ├── final_optimized_catboost_model.cbm
-│   ├── feature_columns.pkl
-│   ├── feature_names.pkl
-│   └── model_metadata.json
-│
-├── notebook/
-│   └── Mining_Quality_Prediction.ipynb
-│
-├── results/
-│   ├── final_predictions.csv
-│   ├── future_predictions.csv
-│   ├── model_comparison.csv
-│   └── shap_feature_importance.csv
-│
-├── src/
-│   ├── predictor.py
-│   ├── feature_engineering.py
-│   └── utils.py
-│
-├── .gitignore
-│
-└── README.md
-
-```
+- Data cleaning and preprocessing
+- Exploratory Data Analysis
+- Feature engineering
+- Time-based feature creation
+- Rolling statistical features
+- Multiple ML model comparison
+- CatBoost hyperparameter optimization
+- Feature importance analysis
 
 
 ---
 
-# 📊 Dataset Information
+## 📊 Dashboard Features
 
-The project uses the:
-
-## Mining Process Flotation Plant Database
+The Streamlit dashboard provides:
 
 
-The dataset contains real-world operational measurements collected from an iron ore flotation plant.
+### 📂 CSV Upload
+
+- Upload mining sensor CSV files
+- Automatically analyze uploaded data
 
 
-### Input Features Include:
+### 📈 Dataset Overview
 
-- Iron Feed Percentage
-- Silica Feed Percentage
-- Starch Flow
-- Amine Flow
-- Ore Pulp pH
-- Ore Pulp Density
-- Process Sensor Measurements
-- Time-based Features
+Displays:
+
+- Total records
+- Number of features
+- Missing values
 
 
-### Output Target:
+### 🔮 Prediction
+
+Generates:
+
+- Predicted Silica Concentrate value
+- Model information
+- Prediction summary
+
+
+### 📊 Data Visualization
+
+Includes:
+
+- Historical silica concentrate trend
+- Mining process parameter analysis
+- Actual vs Predicted comparison
+- Statistical summary
+
+
+---
+
+# 🤖 Machine Learning Model
+
+
+## Final Selected Model
+
+### Optimized CatBoost Regression
+
+
+CatBoost was selected because:
+
+- It handles complex nonlinear relationships
+- It performs well on industrial datasets
+- It captures feature interactions effectively
+- It requires minimal preprocessing
+
+
+---
+
+# 📂 Dataset Information
+
+
+Dataset Used:
+
+**Mining Process Flotation Plant Database**
+
+
+The dataset contains:
+
+- Process sensor measurements
+- Chemical parameters
+- Flotation plant variables
+- Silica concentrate values
+
+
+Target Variable:
 
 ```
 % Silica Concentrate
 ```
 
 
----
+Important Input Features:
 
-# 🔄 Data Processing Pipeline
-
-
-## 1. Data Cleaning
-
-Performed preprocessing steps:
-
-- Missing value handling
-- Data type correction
-- Duplicate removal
-- Data consistency checking
+- % Iron Feed
+- % Silica Feed
+- Starch Flow
+- Amina Flow
+- Ore Pulp pH
+- Ore Pulp Density
+- Process sensor measurements
 
 
 ---
 
-## 2. Feature Engineering
-
-
-Created advanced features:
-
-### Time Features
-
-- Hour
-- Day
-- Month
-- Day of Week
-
-
-### Rolling Statistics
-
-- Rolling Mean
-- Rolling Standard Deviation
-- Lag Features
-
-
-These features help the model understand process behavior over time.
-
-
----
-
-# 🤖 Machine Learning Models
-
-
-Multiple regression models were trained and evaluated.
-
-
-| Model | Algorithm |
-|---|---|
-| Linear Regression | Regression |
-| Random Forest | Ensemble Learning |
-| Extra Trees | Ensemble Learning |
-| XGBoost | Gradient Boosting |
-| LightGBM | Gradient Boosting |
-| Artificial Neural Network | Deep Learning |
-| CatBoost | Gradient Boosting |
-
-
----
-
-# 🏆 Final Model
-
-
-After model comparison and optimization, the best performing model selected was:
-
-
-## Optimized CatBoost Regression Model
-
-
-Model File:
-
-```
-final_optimized_catboost_model.cbm
-```
-
-
-### Why CatBoost?
-
-- Excellent performance on tabular datasets
-- Handles complex feature relationships
-- Robust against overfitting
-- Efficient training performance
-
-
----
-
-# 📈 Model Evaluation
-
-
-The models were evaluated using:
-
-
-### Evaluation Metrics
-
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- Root Mean Squared Error (RMSE)
-- R² Score
-
-
-Model comparison results are available inside:
-
-
-```
-results/
-```
-
-
----
-
-# 🚀 Application Features
-
-
-# 1. FastAPI Backend
-
-
-The project provides a REST API for prediction.
-
-
-### Endpoint
-
-
-```
-POST /predict
-```
-
-
-### Example Request
-
-```json
-[
- {
-  "% Iron Feed": 55.2,
-  "% Silica Feed": 1.5,
-  "Ore Pulp pH": 10.2
- }
-]
-```
-
-
-### Example Response
-
-
-```json
-{
-    "prediction": 2.412,
-    "unit": "%",
-    "target": "% Silica Concentrate",
-    "model": "Optimized CatBoost + Time Features"
-}
-```
-
-
----
-
-# 2. Streamlit Dashboard
-
-
-The interactive dashboard provides:
-
-
-## Dataset Overview
-
-Features:
-
-- CSV upload
-- Dataset preview
-- Total records
-- Number of features
-- Missing value analysis
-
-
-## Prediction
-
-Users can:
-
-- Upload mining sensor CSV
-- Run prediction
-- View predicted silica concentration
-
-
-## Visualization
-
-
-Dashboard includes:
-
-- Silica Concentrate Trend
-- Mining Parameter Analysis
-- Actual vs Predicted Comparison
-- Statistical Summary
-
-
----
-
-# 🛠️ Technology Stack
+# 🛠️ Technologies Used
 
 
 ## Programming Language
@@ -376,21 +237,15 @@ Dashboard includes:
 - Python
 
 
-## Data Processing
+## Machine Learning
 
+- CatBoost
+- Scikit-learn
 - Pandas
 - NumPy
 
 
-## Machine Learning
-
-- Scikit-learn
-- CatBoost
-- XGBoost
-- LightGBM
-
-
-## Visualization
+## Data Visualization
 
 - Plotly
 - Streamlit
@@ -402,16 +257,64 @@ Dashboard includes:
 - Uvicorn
 
 
-## Development Tools
+## Deployment
 
-- Jupyter Notebook
+- Render
+- Streamlit Cloud
+
+
+## Version Control
+
 - Git
 - GitHub
 
 
 ---
 
-# ⚙️ Installation and Setup
+# 📂 Project Structure
+
+
+```
+Mining-Quality-Prediction/
+
+│
+├── api/
+│   ├── main.py
+│   ├── predict.py
+│   └── schemas.py
+│
+├── app/
+│   └── app.py
+│
+├── models/
+│   ├── feature_columns.pkl
+│   ├── feature_names.pkl
+│   └── final_optimized_catboost_model.cbm
+│
+├── src/
+│   ├── feature_engineering.py
+│   ├── predictor.py
+│   └── utils.py
+│
+├── notebook/
+│   └── Mining_Quality_Prediction.ipynb
+│
+├── data/
+│
+├── results/
+│
+├── requirements.txt
+│
+├── .gitignore
+│
+└── README.md
+
+```
+
+
+---
+
+# ⚙️ Installation & Setup
 
 
 ## Clone Repository
@@ -432,20 +335,20 @@ cd Mining-Quality-Prediction
 
 ---
 
-# Install Dependencies
+# 📦 Install Dependencies
 
 
 ```bash
-pip install -r deployment/requirements.txt
+pip install -r requirements.txt
 ```
 
 
 ---
 
-# ▶️ Run FastAPI Server
+# ▶️ Run Application Locally
 
 
-Start backend:
+## Start FastAPI Backend
 
 
 ```bash
@@ -453,16 +356,14 @@ uvicorn api.main:app --reload
 ```
 
 
-API URL:
-
+Backend will run:
 
 ```
 http://127.0.0.1:8000
 ```
 
 
-Swagger Documentation:
-
+API Documentation:
 
 ```
 http://127.0.0.1:8000/docs
@@ -471,7 +372,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# ▶️ Run Streamlit Dashboard
+## Start Streamlit Dashboard
 
 
 Open another terminal:
@@ -482,8 +383,7 @@ streamlit run app/app.py
 ```
 
 
-Dashboard URL:
-
+Dashboard:
 
 ```
 http://localhost:8501
@@ -492,36 +392,102 @@ http://localhost:8501
 
 ---
 
-# 📸 Dashboard Preview
+# 🔌 API Usage
 
 
-Add your dashboard screenshots here:
+## Prediction Endpoint
 
 
 ```
-assets/
+POST /predict
+```
 
-└── dashboard.png
 
+Example Response:
+
+
+```json
+{
+    "prediction": 2.412,
+    "unit": "%",
+    "target": "% Silica Concentrate",
+    "model": "Optimized CatBoost + Time Features"
+}
 ```
 
 
 ---
 
-# 📁 Model Files
+# 📈 Model Evaluation
 
 
-Important trained files:
+The project includes:
 
+- Model comparison
+- Prediction analysis
+- Feature importance
+- SHAP interpretation
+
+
+Evaluation metrics:
+
+- MAE
+- RMSE
+- R² Score
+
+
+---
+
+# 📊 Results
+
+
+The final deployed model provides:
+
+✅ Silica concentrate prediction
+
+✅ Fast API inference
+
+✅ Interactive visualization dashboard
+
+✅ End-to-end ML deployment
+
+
+---
+
+# 🌐 Deployment
+
+
+## Backend
+
+Platform:
 
 ```
-models/
+Render
+```
 
-├── final_optimized_catboost_model.cbm
-├── feature_columns.pkl
-├── feature_names.pkl
-└── model_metadata.json
 
+Technology:
+
+```
+FastAPI + Uvicorn
+```
+
+
+---
+
+## Dashboard
+
+Platform:
+
+```
+Streamlit Cloud
+```
+
+
+Technology:
+
+```
+Streamlit
 ```
 
 
@@ -530,15 +496,14 @@ models/
 # 🔮 Future Improvements
 
 
-Planned improvements:
-
+Future enhancements:
 
 - Real-time sensor data integration
-- Cloud deployment
-- Docker deployment
 - Automated model retraining
+- Database integration
+- IoT sensor connectivity
 - MLOps pipeline implementation
-- Model monitoring system
+- Real-time monitoring dashboard
 
 
 ---
@@ -551,32 +516,25 @@ Planned improvements:
 B.Tech Computer Science Engineering
 
 
-### Areas of Interest
+GitHub:
+
+```
+https://github.com/Tamanna7574
+```
+
+
+---
+
+# ⭐ Acknowledgement
+
+
+This project helped in applying practical concepts of:
 
 - Machine Learning
 - Data Analytics
-- Artificial Intelligence
-- Data Visualization
-- Software Development
+- Industrial AI
+- Backend Development
+- Model Deployment
 
 
----
-
-# ⭐ Project Highlights
-
-
-✅ End-to-End Machine Learning Pipeline  
-✅ Advanced Time-Series Feature Engineering  
-✅ Multiple Model Comparison  
-✅ Optimized CatBoost Regression  
-✅ FastAPI Deployment  
-✅ Streamlit Analytics Dashboard  
-✅ Real-Time Prediction Capability  
-
-
----
-
-# 📜 License
-
-
-This project is developed for educational and research purposes.
+If you find this project useful, consider giving it a ⭐ on GitHub.
