@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Notebook
+.ipynb_checkpoints/
+notebook/catboost_info/
+
+# Large datasets
+data/advanced_time_series_features.csv
+data/MiningProcess_Flotation_Plant_Database.csv
+
+# Generated artifacts
+artifacts/
+
+# Temporary files
+*.log
